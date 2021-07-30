@@ -5,7 +5,7 @@ module.exports={
      // extensions:[] //这个不用配置了，系统默认配好了.js .vue .css
       extensions:[],
       alias:{
-        '@':'src',//这个是默认的别名@对应的就是src
+        //'@':'src',//这个是默认的别名@对应的就是src
         'assets':'@/assets',
         'common':'@/assets',
         'acomponents':'@/assets',

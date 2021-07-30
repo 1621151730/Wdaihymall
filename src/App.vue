@@ -1,21 +1,20 @@
 <template>
   <div id="app">
-<h1>8885552</h1>
-    <router-view/>
+    <Item></Item>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Item from "./components/Item";
 export default {
   name:'app',
   components:{
-
+    Item
   }
 }
 </script>
 
 <style>
-
 @import "assets/css/base.css";
-
 </style>
