@@ -28,7 +28,6 @@ export function request1(config) {
    // console.log(result);
      return err
   })
-
   return instance1(config)
 
 }

@@ -1,6 +1,6 @@
 <template>
 <!-- TabBar就一个插槽-->
-  <TabBar>
+  <TabBar class="tab-Bar" v-if="isShow">
     <TabBarItem path="/home">
       <router-link to="/home"></router-link>
       <!--TabBarItem中有三个插槽-->
@@ -43,9 +43,25 @@ export default {
   name: "Item",
   components:{
     TabBar,
-    TabBarItem
-  }
+    TabBarItem,
+  },
+  data(){
+    return{
+      isShow:true
+    }
+  },
+  methods:{
 
+  },
+  mounted() {
+    this.$bus.$on('isShowHide',()=>{
+      this.isShow=false
+    })
+
+    this.$bus.$on('isShowApper',()=>{
+      this.isShow=true
+    })
+  }
 }
 </script>
 

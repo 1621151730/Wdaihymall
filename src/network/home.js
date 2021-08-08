@@ -9,8 +9,19 @@ export function getHomeMultidata() {
   return request1({
     url:'/home/multidata'
   }).then((res)=>{
-    console.log(res)
+   // console.log(res)
     //记得的返回
      return res
   })
+}
+export function getHomeGoods(type,page){
+  return request1({
+    url:'/home/data',
+    params:{
+      type,
+      page
+  }
+  })
+
+
 }

@@ -53,7 +53,7 @@ export default {
   text-align: center;
 }
 .tar-bar-item img{
-  height: 40px;
-  width: 40px;
+  height: 80px;
+  width: 80px;
 }
 </style>

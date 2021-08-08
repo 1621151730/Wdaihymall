@@ -1,8 +1,8 @@
 <template>
   <Swiper>
-    <SwiperItem v-for="item in HSbanners">
+    <SwiperItem v-for="item in HSbanners" >
       <a v-bind:href="item.link">
-        <img v-bind:src="item.image" alt="">
+        <img v-bind:src="item.image" alt="" @load="imageload">
       </a>
     </SwiperItem>
   </Swiper>
@@ -26,13 +26,19 @@ export default {
   },
     data(){
       return{
-
+          isLoad:false
       }
   },
+  methods:{
+    imageload(){
+      if(!this.isLoad){
+        console.log('******');
+        this.$emit('imageload')
+        this.isLoad=true
+      }
 
-
-
-
+    }
+  }
 }
 </script>
 

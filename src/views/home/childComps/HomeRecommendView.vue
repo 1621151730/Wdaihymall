@@ -35,18 +35,19 @@ export default {
     display: flex; /*变成了一行*/
     width: 100%;
      text-align: center;
-     font-size: 14px;
+     /*font-size: 14px;*/
     padding: 15px 0 20px;/* 上 左右 下 */
     /* 画杠杠*/
     border-bottom: 10px solid #dcdada;
+    background: white;
   }
   .recommend-item{
     flex: 1;
 
   }
-  .recommend img{
-    width: 70px;
-    height: 70px;
+  .recommend img{ /* 设置recommend下面的img*/
+    width: 200px;
+    height: 200px;
    /*把图片下面留点距离*/
     margin-bottom: 6px;
   }
