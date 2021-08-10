@@ -1,16 +1,20 @@
+#项目名称
 # wdaihymall
+
+##项目描述
+#项目是根据coderwhy老师教程写的，
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 项目运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 项目创建打包
 ```
 npm run build
 ```
