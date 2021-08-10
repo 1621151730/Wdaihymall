@@ -17,22 +17,23 @@
   </div>
 
 <div class="bottom_font">
-  <div class="addCart">
-    <div>加入购物车</div>
-  </div>
-  <div class="buy_now">
-    <div>立即购买</div>
-  </div>
+  <div class="addCart" @click="addCartClick">加入购物车</div>
+  <div class="buy_now">立即购买</div>
 </div>
-
-
-
 
 </div>
 </template>
 <script>
 export default {
-  name: "DetailBottomBar"
+  name: "DetailBottomBar",
+  computed:{
+
+  },
+  methods:{
+    addCartClick(){
+      this.$emit('addToCart')
+    }
+  }
 }
 </script>
 

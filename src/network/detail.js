@@ -22,7 +22,7 @@ export class Goods {
     this.desc = itemInfo.desc
     this.newPrice = itemInfo.price
     this.oldPrice = itemInfo.oldPrice
-    this.discount = itemInfo.discountDesc
+    this.discountBgColor = itemInfo.discountBgColor
     this.columns = columns
     this.services = services
     this.realPrice = itemInfo.lowNowPrice

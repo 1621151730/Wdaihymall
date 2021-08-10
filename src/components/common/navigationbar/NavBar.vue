@@ -26,22 +26,18 @@ export default {
   left: 0;
   right:0;
   top: 0;
-  height: 140px;
+  height: 44px;
   text-align: center;
   z-index: 9;
   /*不加这一行,center居中只在上部分,加上了限高就在中间了*/
-  line-height: 140px;  /*限高44px的,如果没有内容就撑不起来*/
+  line-height: 44px;  /*限高44px的,如果没有内容就撑不起来*/
   box-shadow: 0 1px 8px rgba(100,100,100,.1);
 }
 .left,.right{
-  width: 150px;
-
+  width: 45px;
 }
 .center{
   flex: 1;
-
-
-
 }
 
 </style>

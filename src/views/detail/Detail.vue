@@ -15,7 +15,7 @@
    <goods-list  :g-lgoods="Recommend" ref="recommend"></goods-list>
   </scroll>
   <BackTop @click.native="backTopClick" v-show="detialisShow"></BackTop>
-  <detail-bottom-bar></detail-bottom-bar>
+  <detail-bottom-bar @addToCart="detail_addToCart"></detail-bottom-bar>
 </div>
 
 </template>
@@ -37,6 +37,7 @@ import GoodsList from "../../components/content/goods/GoodsList";
 import BackTop from "../../components/common/backTop/BackTop";
 import DetailBottomBar from "./childComps/DetailBottomBar"
 
+
 export default {
   name: "Datail",
   components:{
@@ -50,7 +51,7 @@ export default {
     DetailCommentInfo,
     GoodsList,
     BackTop,
-    DetailBottomBar
+    DetailBottomBar,
   },
   data(){
     return{
@@ -68,7 +69,7 @@ export default {
   },
 methods:{
 
-    imageLoad(){
+  imageLoad(){
       //console.log('-----');
       this.$refs.scroll.refresh()
       this.getThemeTopY()
@@ -104,6 +105,23 @@ methods:{
     // this.$refs.scroll.scrollTop(0,-this.themetopYs[index]+140,200)
     this.$refs.scroll.scrollTop(0,-this.themetopYs[index]+140,200)
     console.log(this.themetopYs)
+  },
+
+  detail_addToCart(){
+    console.log('点击了加入购物车');
+    const product={}
+    product.image=this.topImages[0];
+    product.title=this. goods.title;
+    product.desc=this. goods.desc;
+    product.price=this.goods.realPrice;
+    product.iid=this.iid;
+    console.log(product)
+    //装载到Vuex中
+    //this.$store.commit('addCart',product)
+    this.$store.dispatch('addCart',product).then(res=>{
+      console.log(res)
+      this.$toast.show(res , 2000)
+    })
 
   }
 
@@ -175,7 +193,9 @@ methods:{
   //    newRefresh()
   // })
   //   },
+mounted() {
 
+}
 
 
 }

@@ -1,6 +1,6 @@
 <!--下面框里的一个一个组件的-->
 <template>
-  <div class="tar-bar-item" @click="click">
+  <div class="tar-bar-item" @click="click" >
 
     <div v-if="!isActive"><slot name="bar-icon"></slot></div>
     <div v-else><slot name="bar-icon-active"></slot></div>
