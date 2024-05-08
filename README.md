@@ -2,7 +2,7 @@
 # wdaihymall
 
 ##项目描述
-#项目是根据coderwhy老师教程写的，
+#项目是根据mall H5，
 
 ## Project setup
 ```
